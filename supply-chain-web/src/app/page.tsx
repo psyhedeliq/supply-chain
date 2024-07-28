@@ -89,15 +89,18 @@ export default function Home() {
                                 {searchResults.map((result) => (
                                     <div
                                         key={result.id}
-                                        className="p-4 border rounded-lg shadow-sm"
+                                        className="p-4 border rounded-lg shadow-sm bg-white"
                                     >
                                         <button
                                             onClick={() =>
                                                 handleSearch(`#${result.id}`)
                                             }
-                                            className="text-primary-color hover:underline"
+                                            className="btn btn-secondary"
                                         >
-                                            {result.name} (ID: {result.id})
+                                            {result.name}{' '}
+                                            <span className="text-gray-500">
+                                                (ID: {result.id})
+                                            </span>
                                         </button>
                                     </div>
                                 ))}
